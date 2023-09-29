@@ -21,7 +21,7 @@ CREATE VIEW student_library AS
 SELECT id_student, fullname, phone_number, book_id, book_name, Date_of_lending,
 FROM info_student, book_list,Loaned_books;
 
-CREATE OR REPLACE TRIGGER trg_update_return_date
+CREATE TRIGGER update_return_date
 BEFORE UPDATE ON Loaned_books
 FOR EACH ROW
 BEGIN
